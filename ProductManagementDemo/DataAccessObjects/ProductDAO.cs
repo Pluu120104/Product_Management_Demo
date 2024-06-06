@@ -25,10 +25,10 @@ namespace DataAccessLayer
             //Product ikura new Product (16, "Ikura", 8, 13, 32);
             // list Products new List<Product> [ chai, chang, aniseed, chef, cheflix, grandmi
         }
-        public List<Product> GetProducts()
+        /*public List<Product> GetProducts()
         {
             return listProducts;
-        }
+        }*/
         public static List<Product> GetProducts()
         {
             var listProducts = new List<Product>();
@@ -41,11 +41,11 @@ namespace DataAccessLayer
 
             return listProducts;
         }
-        public void SaveProduct(Product p)
+        public static void SaveProduct(Product p)
         {
             listProducts.Add(p);
         }
-        public void UpdateProduct(Product product)
+        public static void UpdateProduct(Product product)
         {
             foreach (Product p in listProducts.ToList())
             {
@@ -60,7 +60,7 @@ namespace DataAccessLayer
             }
         }
 
-        public void DeleteProduct(Product product)
+        public static void DeleteProduct(Product product)
         {
             foreach (Product p in listProducts.ToList())
                 {
@@ -70,7 +70,7 @@ namespace DataAccessLayer
                     }
                 }
         }
-        public Product GetProductById(int id)
+        public static Product GetProductById(int id)
         {
             foreach (Product p in listProducts.ToList())
             {
